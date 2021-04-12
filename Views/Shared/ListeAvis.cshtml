@@ -1,0 +1,58 @@
+﻿@{
+    Layout = null;
+    }
+@model List< TPLOCAL1.Models.Avis >
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/ressources/Index.css" />
+    <title>HN - TP LOCAL</title>
+</head>
+<body>
+    <header>
+        <img src="~/ressources/GroupeHN.png" class="image" alt="GroupeHN" />
+        <h1>Liste des avis</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/Home/Index">Accueil</a></li>
+            <li><a href="/Home/Index/Formulaire">Formulaire</a></li>
+        </ul>
+    </nav>
+    <section>
+        <table>
+            <caption>Liste</caption>
+            <tr>
+                <td>Nom</td>
+                <td>Prénom</td>
+                <td>Avis donné</td>
+            </tr>
+            @foreach (var a in Model)
+            {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => a.Nom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => a.Prenom)
+            </td>
+            @if (a.AvisDonne == "O")
+            {
+                 <td style="background-color:green">
+                       Oui
+                 </td>
+                 }
+             else
+             {
+                 <td style="background-color:red">
+                       Non
+                 </td>
+                        }
+        </tr>
+            }
+        </table>
+    </section>
+</body>
+</html>

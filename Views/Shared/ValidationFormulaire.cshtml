@@ -1,0 +1,97 @@
+﻿@model TPLOCAL1.Models.FormulaireModel
+@{
+    ViewBag.Title = "ValidationFormulaire";
+}
+
+    <!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="~/ressources/Index.css" />
+        <title>HN - TP LOCAL</title>
+    </head>
+    <body>
+        <header>
+            <img src="~/ressources/GroupeHN.png" class="image" alt="GroupeHN" />
+            <h1>Page Validation</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="/Home/Index">Accueil</a></li>
+                <li><a href="/Home/Index/ListeAvis">Liste avis</a></li>
+            </ul>
+        </nav>
+        <section>
+            <p>
+                Votre formulaire a bien été pris en compte.
+            </p>
+            <table>
+                <caption>
+                    Informations personnelles
+                </caption>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.Nom)</td>
+                    <td>@Html.DisplayFor(model => model.Nom)</td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.Prenom)</td>
+                    <td>@Html.DisplayFor(model => model.Prenom)</td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.Sexe)</td>
+                    <td>@Html.DisplayFor(model => model.Sexe)</td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.Adresse)</td>
+                    <td>@Html.DisplayFor(model => model.Adresse)</td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.Cpostal)</td>
+                    <td>@Html.DisplayFor(model => model.Cpostal)</td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.Ville)</td>
+                    <td>@Html.DisplayFor(model => model.Ville)</td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.Email)</td>
+                    <td>@Html.DisplayFor(model => model.Email)</td>
+                </tr>
+            </table>
+            <br />
+            <table>
+                <caption>
+                    Information Formation Suivie
+                </caption>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.DateDF)</td>
+                    <td>@Html.DisplayFor(model => model.DateDF)</td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.Formation)</td>
+                    <td>@Html.DisplayFor(model => model.Formation)</td>
+                </tr>
+            </table>
+            <br />
+            <table>
+                <caption>
+                    Avis sur la Formation
+                </caption>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.Fcobol)</td>
+                    <td>@Html.DisplayFor(model => model.Fcobol)</td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.Csharp)</td>
+                    <td>@Html.DisplayFor(model => model.Csharp)</td>
+                </tr>
+            </table>
+            <button id="valider" class="echo-button" type="submit" style="margin-left:170px;">
+                Valider
+            </button>
+        </section>
+    </body>
+</html>
+
+
